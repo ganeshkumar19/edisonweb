@@ -1,7 +1,6 @@
-import { motion, useInView } from 'framer-motion'
+import { motion} from 'framer-motion'
 import { MdSecurity, MdSpeed, MdAutoGraph } from 'react-icons/md'
 import { RiSettings5Line } from 'react-icons/ri'
-import { useEffect, useRef, useState } from 'react'
 import StatCard from './NumberStatCard'
 
 
