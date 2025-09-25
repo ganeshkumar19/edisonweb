@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import thankyouImage from '../assets/images/thankyou.png'
 
 export type Testimonial = {
   quote: string
@@ -69,43 +70,71 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
-            They Just Don’t Stop Loving Us
+            They Just Don't Stop Loving Us
           </h2>
           <p className="mt-4 text-zinc-600">
             From solo tutors to large prep centers, professionals share how EdisonOS streamlines prep and improves outcomes.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((t, idx) => (
-            <motion.blockquote
-              key={t.name + idx}
-              custom={idx}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              className="flex h-full flex-col justify-between rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200"
-            >
-              <p className="text-zinc-800">“{t.quote}”</p>
-              <footer className="mt-6 flex items- justify-end gap-3">
-                <Avatar name={t.name} />
-                <div>
-                  <div className="text-sm font-semibold text-zinc-900">{t.name}</div>
-                  <div className="text-xs text-zinc-600">{t.company}</div>
-                </div>
-              </footer>
-            </motion.blockquote>
-          ))}
-        </div>
+        {/* Testimonials Content - Row on large screens, Column on mobile */}
+        <div className="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          {/* Testimonials Content Section */}
+          <div className="w-full lg:w-1/2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {TESTIMONIALS.map((t, idx) => (
+                <motion.blockquote
+                  key={t.name + idx}
+                  custom={idx}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="flex h-full flex-col justify-between rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200"
+                >
+                  <p className="text-zinc-800">"{t.quote}"</p>
+                  <footer className="mt-6 flex items- justify-end gap-3">
+                    <Avatar name={t.name} />
+                    <div>
+                      <div className="text-sm font-semibold text-zinc-900">{t.name}</div>
+                      <div className="text-xs text-zinc-600">{t.company}</div>
+                    </div>
+                  </footer>
+                </motion.blockquote>
+              ))}
+            </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="#demo"
-            className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
-          >
-            Book a Personalized Demo
-          </a>
+            <div className="mt-8 text-center lg:text-left">
+              <a
+                href="#demo"
+                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
+              >
+                Book a Personalized Demo
+              </a>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-8">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative rounded-sm lg:rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img
+                src={thankyouImage}
+                alt="Thank You - Customer Success"
+                className="w-full h-auto object-cover"
+                style={{
+                  maxHeight: '600px',
+                  minHeight: '500px'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

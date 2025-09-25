@@ -14,10 +14,10 @@ export type FeatureCardProps = {
 export function FeatureCard({ icon, title, description, href, linkLabel, highlighted = false, delay = 0 }: FeatureCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.45, delay }}
+      transition={{ duration: 0.85, delay }}
       className={[
         'rounded-2xl p-6 shadow-sm',
         highlighted ? 'border border-blue-200 bg-blue-50' : 'border border-zinc-200 bg-white',

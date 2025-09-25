@@ -3,6 +3,8 @@ import { MdChecklist, MdQueryStats } from 'react-icons/md'
 import { RiBuildingLine } from 'react-icons/ri'
 import { PiExamBold } from 'react-icons/pi'
 import type { ReactNode } from 'react'
+import { motion } from 'framer-motion'
+import featuresImage from '../assets/images/features.png'
 
 type FeatureItem = {
   icon: ReactNode
@@ -45,26 +47,54 @@ export function Features() {
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
-            All‑in‑One Tools for ACT Test Prep Success
+             Comprehensive Digital Suite for ACT Success
           </h2>
           <p className="mt-4 text-zinc-600">
-            A feature‑rich digital ACT software for tutors to easily build, deliver, and evaluate ACT practice tests — all under one platform.
+          All-in-one ACT preparation suite enabling educators to design, deliver, and assess practice exams for optimal student performance.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURE_ITEMS.map((item, index) => (
-            <FeatureCard
-              key={item.title}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-              href={item.href}
-              linkLabel={item.linkLabel}
-              highlighted={item.highlighted}
-              delay={index * 0.05}
-            />
-          ))}
+        {/* Features Content - Row on large screens, Column on mobile */}
+        <div className="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-8">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3}}
+              transition={{ duration: 0.85 }}
+              className="relative rounded-sm lg:rounded-2xl overflow-hidden shadow-lg"
+            >
+              <motion.img
+                src={featuresImage}
+                alt="ACT Test Prep Features Overview"
+                className="w-full h-auto object-cover"
+                style={{
+                  maxHeight: '800px',
+                  minHeight: '400px'
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            </motion.div>
+          </div>
+
+          {/* Feature Cards Section */}
+          <div className="w-full lg:w-1/2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {FEATURE_ITEMS.map((item, index) => (
+                <FeatureCard
+                  key={item.title}
+                  icon={item.icon}
+                  title={item.title}
+                  description={item.description}
+                  href={item.href}
+                  linkLabel={item.linkLabel}
+                  highlighted={item.highlighted}
+                  delay={index * 0.05}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
