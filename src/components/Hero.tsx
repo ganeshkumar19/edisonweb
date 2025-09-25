@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden font-roboto">
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-28 md:pb-24">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div

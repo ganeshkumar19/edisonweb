@@ -72,18 +72,18 @@ export function Testimonials() {
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
             They Just Don't Stop Loving Us
           </h2>
-          <p className="mt-4 text-zinc-600">
+          <p className="mt-4 md:text-xl lg:text-2xl text-zinc-600">
             From solo tutors to large prep centers, professionals share how EdisonOS streamlines prep and improves outcomes.
           </p>
         </div>
 
         {/* Testimonials Content - Row on large screens, Column on mobile */}
-        <div className="mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        <div className="mt-16 flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 items-start">
           {/* Testimonials Content Section */}
           <div className="w-full lg:w-1/2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {TESTIMONIALS.map((t, idx) => (
-                <motion.blockquote
+                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+               {TESTIMONIALS.map((t, idx) => (
+                 <motion.blockquote
                   key={t.name + idx}
                   custom={idx}
                   variants={cardVariants}
@@ -126,11 +126,7 @@ export function Testimonials() {
               <img
                 src={thankyouImage}
                 alt="Thank You - Customer Success"
-                className="w-full h-auto object-cover"
-                style={{
-                  maxHeight: '600px',
-                  minHeight: '500px'
-                }}
+                className="w-full h-auto object-contain sm:object-cover lg:min-h-[500px] lg:max-h-[600px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
             </motion.div>

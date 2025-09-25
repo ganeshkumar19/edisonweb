@@ -42,6 +42,13 @@ const FEATURE_ITEMS: FeatureItem[] = [
 ]
 
 export function Features() {
+  const gradients = [
+    { from: 'from-blue-500', to: 'to-cyan-500', icon: 'text-blue-600' },
+    { from: 'from-violet-500', to: 'to-fuchsia-500', icon: 'text-violet-600' },
+    { from: 'from-emerald-500', to: 'to-teal-500', icon: 'text-emerald-600' },
+    { from: 'from-amber-500', to: 'to-orange-500', icon: 'text-amber-600' },
+  ]
+
   return (
     <section id="features" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
@@ -68,11 +75,7 @@ export function Features() {
               <motion.img
                 src={featuresImage}
                 alt="ACT Test Prep Features Overview"
-                className="w-full h-auto object-cover"
-                style={{
-                  maxHeight: '800px',
-                  minHeight: '400px'
-                }}
+                className="w-full h-auto object-contain sm:object-cover lg:min-h-[400px] lg:max-h-[800px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
             </motion.div>
@@ -80,19 +83,25 @@ export function Features() {
 
           {/* Feature Cards Section */}
           <div className="w-full lg:w-1/2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {FEATURE_ITEMS.map((item, index) => (
-                <FeatureCard
-                  key={item.title}
-                  icon={item.icon}
-                  title={item.title}
-                  description={item.description}
-                  href={item.href}
-                  linkLabel={item.linkLabel}
-                  highlighted={item.highlighted}
-                  delay={index * 0.05}
-                />
-              ))}
+                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+               {FEATURE_ITEMS.map((item, index) => {
+                 const g = gradients[index % gradients.length]
+                 return (
+                   <FeatureCard
+                    key={item.title}
+                    icon={item.icon}
+                    title={item.title}
+                    description={item.description}
+                    href={item.href}
+                    linkLabel={item.linkLabel}
+                    highlighted={item.highlighted}
+                    delay={index * 0.05}
+                    gradientFrom={g.from}
+                    gradientTo={g.to}
+                    iconColorClass={g.icon}
+                  />
+                )
+              })}
             </div>
           </div>
         </div>

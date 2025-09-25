@@ -10,7 +10,6 @@ export type NavItem = {
 const navItems: NavItem[] = [
   { label: 'Features', href: '#features' },
   { label: 'Why EdisonOS', href: '#why' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
   { label: 'FAQ', href: '#faq' },
@@ -57,7 +56,7 @@ export function Navbar() {
             <img src={logo} alt="Edison logo" className="h-8 w-auto" />
           </a>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               <ScrollLink
                 key={item.href}
@@ -70,7 +69,7 @@ export function Navbar() {
                 duration={500}
                 offset={-64}
                 onClick={handleCloseMobileMenu}
-                className="cursor-pointer text-sm font-medium text-zinc-300 hover:text-blue-400 hover:text-base transition-all duration-200"
+                className="cursor-pointer text-sm  md:text-md font-medium text-zinc-300 hover:text-blue-400 hover:text-base transition-all duration-200"
                 activeClass="text-blue-400 font-semibold"
               >
                 {item.label}
@@ -98,7 +97,7 @@ export function Navbar() {
             </ScrollLink>
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md p-2 text-zinc-200 hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -130,7 +129,7 @@ export function Navbar() {
       <div
         id="mobile-menu"
         className={[
-          'md:hidden grid transition-[grid-template-rows] duration-300 ease-in-out',
+          'lg:hidden grid transition-[grid-template-rows] duration-300 ease-in-out',
           isMobileMenuOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
         ].join(' ')}
       >

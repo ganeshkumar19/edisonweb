@@ -20,7 +20,7 @@ export function WhyEdisonOS() {
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
             Why EdisonOS for ACT Tutors
           </h2>
-          <p className="mt-4 text-zinc-700">
+          <p className="mt-4 md:text-xl lg:text-2xl text-zinc-700">
             Purpose‑built to help tutors build official‑like tests, diagnose skills, and improve scores with data‑backed insights.
           </p>
         </div>
@@ -40,8 +40,8 @@ export function WhyEdisonOS() {
                 <MdAutoGraph size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-zinc-900">Diagnose & Personalize</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">
+                <h3 className="text-lg  font-semibold md:text-xl lg:text-2xl text-zinc-900">Diagnose & Personalize</h3>
+                <p className="mt-2 text-sm md:text-md lg:text-lg leading-6 text-zinc-600">
                   Administer diagnostics, identify improvement areas, and build personalized ACT study plans that target gaps.
                 </p>
               </div>
@@ -61,8 +61,8 @@ export function WhyEdisonOS() {
                 <RiSettings5Line size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-zinc-900">Official‑like Experience</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">
+                <h3 className="text-lg  font-semibold md:text-xl lg:text-2xl text-zinc-900">Official‑like Experience</h3>
+                <p className="mt-2 text-sm md:text-md lg:text-lg leading-6 text-zinc-600">
                   Deliver a testing interface that mirrors the ACT online experience so students feel test‑day ready.
                 </p>
               </div>
@@ -82,8 +82,8 @@ export function WhyEdisonOS() {
                 <MdSpeed size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-zinc-900">Save Time, Teach More</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600">
+                <h3 className="text-lg  font-semibold md:text-xl lg:text-2xl text-zinc-900">Save Time, Teach More</h3>
+                <p className="mt-2 text-sm md:text-md lg:text-lg leading-6 text-zinc-600">
                   Build tests in under 60 minutes, auto‑grade submissions, and share clear reports with parents.
                 </p>
               </div>
@@ -103,8 +103,8 @@ export function WhyEdisonOS() {
                 <MdSecurity size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-zinc-900">Proven Results</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-700">
+                <h3 className="text-lg  font-semibold md:text-xl lg:text-2xl text-zinc-900">Proven Results</h3>
+                <p className="mt-2 text-sm md:text-md lg:text-lg leading-6 text-zinc-700">
                   Tutors report 200+ point improvements using adaptive testing and granular analytics.
                 </p>
               </div>
@@ -123,13 +123,13 @@ export function WhyEdisonOS() {
         <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#get-started"
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base  font-semibold md:text-xl lg:text-2xl text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             Start Free Trial
           </a>
           <a
             href="#demo"
-            className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
+            className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base  font-semibold md:text-xl lg:text-2xl text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
           >
             Book a Demo
           </a>
