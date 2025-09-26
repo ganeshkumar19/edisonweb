@@ -16,7 +16,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "The more we use the platform, the more impressed we are. It’s become an invaluable resource for our prep programs.",
+      "The more we use the platform, the more impressed we are. It's become an invaluable resource for our prep programs.",
     name: 'Joe Krupnick',
     company: 'Krupnick Approach',
   },
@@ -46,14 +46,14 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ]
 
-function Avatar({ name }: { name: string }) {
+function Avatar({ name, colorClass }: { name: string; colorClass: string }) {
   const initials = name
     .split(' ')
     .map((n) => n[0])
     .slice(0, 2)
     .join('')
   return (
-    <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-blue-600/10 text-blue-700 text-sm font-semibold">
+    <div className={`grid h-10 w-10 shrink-0 place-items-center rounded-full ${colorClass} text-sm font-semibold`}>
       {initials}
     </div>
   )
@@ -65,15 +65,24 @@ const cardVariants = {
 }
 
 export function Testimonials() {
+  const gradients = [
+    { from: 'from-blue-500', to: 'to-cyan-500', nameColor: 'text-blue-600', avatarColor: 'bg-blue-600/10 text-blue-700' },
+    { from: 'from-violet-500', to: 'to-fuchsia-500', nameColor: 'text-violet-600', avatarColor: 'bg-violet-600/10 text-violet-700' },
+    { from: 'from-emerald-500', to: 'to-teal-500', nameColor: 'text-emerald-600', avatarColor: 'bg-emerald-600/10 text-emerald-700' },
+    { from: 'from-amber-500', to: 'to-orange-500', nameColor: 'text-amber-600', avatarColor: 'bg-amber-600/10 text-amber-700' },
+    { from: 'from-rose-500', to: 'to-pink-500', nameColor: 'text-rose-600', avatarColor: 'bg-rose-600/10 text-rose-700' },
+    { from: 'from-indigo-500', to: 'to-purple-500', nameColor: 'text-indigo-600', avatarColor: 'bg-indigo-600/10 text-indigo-700' },
+  ]
+
   return (
     <section id="testimonials" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
-            They Just Don't Stop Loving Us
+            Loved by Educators Everywhere
           </h2>
           <p className="mt-4 md:text-xl lg:text-2xl text-zinc-600">
-            From solo tutors to large prep centers, professionals share how EdisonOS streamlines prep and improves outcomes.
+            From independent tutors to national prep companies, professionals trust EdisonOS to simplify planning and boost student scores.
           </p>
         </div>
 
@@ -81,36 +90,32 @@ export function Testimonials() {
         <div className="mt-16 flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 items-start">
           {/* Testimonials Content Section */}
           <div className="w-full lg:w-1/2">
-                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-               {TESTIMONIALS.map((t, idx) => (
-                 <motion.blockquote
-                  key={t.name + idx}
-                  custom={idx}
-                  variants={cardVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  className="flex h-full flex-col justify-between rounded-2xl bg-zinc-50 p-6 ring-1 ring-zinc-200"
-                >
-                  <p className="text-zinc-800">"{t.quote}"</p>
-                  <footer className="mt-6 flex items- justify-end gap-3">
-                    <Avatar name={t.name} />
-                    <div>
-                      <div className="text-sm font-semibold text-zinc-900">{t.name}</div>
-                      <div className="text-xs text-zinc-600">{t.company}</div>
-                    </div>
-                  </footer>
-                </motion.blockquote>
-              ))}
-            </div>
-
-            <div className="mt-8 text-center lg:text-left">
-              <a
-                href="#demo"
-                className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
-              >
-                Book a Personalized Demo
-              </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {TESTIMONIALS.map((t, idx) => {
+                const g = gradients[idx % gradients.length]
+                return (
+                  <motion.div
+                    key={t.name + idx}
+                    custom={idx}
+                    variants={cardVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className={`rounded-2xl p-[1px] shadow-sm bg-gradient-to-r ${g.from} ${g.to}`}
+                  >
+                    <blockquote className="flex h-full flex-col justify-between rounded-2xl bg-zinc-50 p-6">
+                      <p className="text-zinc-800">"{t.quote}"</p>
+                      <footer className="mt-6 flex items- justify-end gap-3">
+                        <Avatar name={t.name} colorClass={g.avatarColor} />
+                        <div>
+                          <div className={`text-sm font-semibold ${g.nameColor}`}>{t.name}</div>
+                          <div className="text-xs text-zinc-600">{t.company}</div>
+                        </div>
+                      </footer>
+                    </blockquote>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
 

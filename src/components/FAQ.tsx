@@ -55,7 +55,7 @@ function FAQRow({ item, index, openIndex, setOpenIndex }: { item: FAQItem; index
         onClick={() => setOpenIndex(open ? null : index)}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="text-base font-semibold tracking-tight text-zinc-900">{item.q}</span>
+        <span className="text-base md:text-ld lg:text-xl font-semibold tracking-tight text-zinc-900">{item.q}</span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.2, ease: 'easeOut' }}
@@ -72,7 +72,7 @@ function FAQRow({ item, index, openIndex, setOpenIndex }: { item: FAQItem; index
         transition={{ duration: 0.25, ease: 'easeInOut' }}
         className="px-5 pb-5"
       >
-        <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-4 text-sm leading-6 text-zinc-700">
+        <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-4 text-sm md:text-md lg:text-lg leading-6 text-zinc-700">
           {item.a}
         </div>
       </motion.div>
@@ -90,7 +90,7 @@ export function FAQ() {
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">Frequently asked questions</h2>
-          <p className="mt-4 text-zinc-600">
+          <p className="mt-4 md:text-xl lg:text-2xl text-zinc-600">
             Answers to common questions about EdisonOS and our ACT testing experience.
           </p>
         </div>

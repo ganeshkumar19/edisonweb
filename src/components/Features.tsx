@@ -53,10 +53,10 @@ export function Features() {
     <section id="features" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl  font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
              Comprehensive Digital Suite for ACT Success
           </h2>
-          <p className="mt-4 text-zinc-600">
+          <p className="mt-4 md:text-xl lg:text-2xl text-zinc-600">
           All-in-one ACT preparation suite enabling educators to design, deliver, and assess practice exams for optimal student performance.
           </p>
         </div>

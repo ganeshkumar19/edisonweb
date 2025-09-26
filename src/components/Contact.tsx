@@ -15,7 +15,7 @@ export function Contact() {
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
             Connect with our ACT expert
           </h2>
-          <p className="mt-4 text-zinc-600">
+          <p className="mt-4 md:text-xl lg:text-2xl text-zinc-600">
             Customize the platform to your needs. Book a personalized demo or send us a message — we’ll get back shortly.
           </p>
         </div>

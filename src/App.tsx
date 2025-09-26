@@ -6,6 +6,7 @@ import { WhyEdisonOS } from './components/WhyEdisonOS'
 import { Testimonials } from './components/Testimonials'
 import { Contact } from './components/Contact'
 import { FAQ } from './components/FAQ'
+import { Footer } from './components/Footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Testimonials />
       <Contact />
       <FAQ />
+      <Footer/>
     </>
   )
 }

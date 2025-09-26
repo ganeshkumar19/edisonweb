@@ -69,7 +69,7 @@ export function Navbar() {
                 duration={500}
                 offset={-64}
                 onClick={handleCloseMobileMenu}
-                className="cursor-pointer text-sm  md:text-md font-medium text-zinc-300 hover:text-blue-400 hover:text-base transition-all duration-200"
+                className="cursor-pointer text-sm md:text-sm lg:text-lg  font-medium text-white hover:text-blue-400 hover:text-base transition-all duration-200"
                 activeClass="text-blue-400 font-semibold"
               >
                 {item.label}
