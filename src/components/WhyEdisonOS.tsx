@@ -128,7 +128,9 @@ export function WhyEdisonOS() {
             Start Free Trial
           </a>
           <a
-            href="#demo"
+            href="https://www.edisonos.com/book-a-demo"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base  font-semibold md:text-xl lg:text-2xl text-blue-700 ring-1 ring-inset ring-blue-200 hover:bg-blue-50"
           >
             Book a Demo

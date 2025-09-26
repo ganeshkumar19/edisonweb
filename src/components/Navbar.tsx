@@ -85,16 +85,14 @@ export function Navbar() {
             >
               Start Free Trial
             </ScrollLink>
-            <ScrollLink
-              to={toTargetId('#demo')}
-              smooth={true}
-              duration={500}
-              offset={-64}
-              onClick={handleCloseMobileMenu}
-              className="inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-zinc-200 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800 cursor-pointer"
+            <a
+              href="https://www.edisonos.com/book-a-demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-zinc-200 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800"
             >
               Book a Demo
-            </ScrollLink>
+            </a>
           </div>
 
           <div className="lg:hidden">
@@ -164,16 +162,14 @@ export function Navbar() {
               >
                 Start Free Trial
               </ScrollLink>
-              <ScrollLink
-                to={toTargetId('#demo')}
-                smooth={true}
-                duration={500}
-                offset={-64}
-                onClick={handleCloseMobileMenu}
-                className="block rounded-md px-3 py-2 text-center text-base font-semibold text-zinc-200 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800 cursor-pointer"
+              <a
+                href="https://www.edisonos.com/book-a-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-md px-3 py-2 text-center text-base font-semibold text-zinc-200 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800"
               >
                 Book a Demo
-              </ScrollLink>
+              </a>
             </div>
           </div>
         </div>

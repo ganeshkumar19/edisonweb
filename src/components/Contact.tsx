@@ -46,7 +46,7 @@ export function Contact() {
                 <button type="button" className="inline-flex w-full items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
                   Send Message
                 </button>
-                <a href="#demo" className="inline-flex w-full items-center justify-center rounded-md bg-white/70 px-6 py-3 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 backdrop-blur hover:bg-white">
+                <a href="https://www.edisonos.com/book-a-demo" target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-md bg-white/70 px-6 py-3 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 backdrop-blur hover:bg-white">
                   Book a Demo
                 </a>
               </div>

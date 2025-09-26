@@ -48,7 +48,9 @@ export function Hero() {
               Start Free Trial
             </a>
             <a
-              href="#demo"
+              href="https://www.edisonos.com/book-a-demo"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold text-white ring-1 ring-inset ring-zinc-700 hover:bg-zinc-800"
             >
               Book a Demo
