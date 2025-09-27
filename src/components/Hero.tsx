@@ -2,7 +2,12 @@ import { motion } from 'framer-motion'
 
 export function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden font-roboto">
+    <section id="hero" className="relative w-full overflow-hidden font-roboto">
+      {/* Background container with full viewport coverage */}
+      <div className="pointer-events-none absolute inset-0 -z-10 w-screen left-1/2 -translate-x-1/2 overflow-hidden rounded-b-2xl">
+        <div className="absolute inset-0 w-full bg-gradient-to-b from-blue-950 via-slate-950 to-slate-900" />
+      </div>
+      
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-28 md:pb-24">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
@@ -66,11 +71,6 @@ export function Hero() {
             Trusted by 100+ Test Prep Companies
           </motion.p>
         </div>
-      </div>
-
-      {/* Background container with rounded bottom corners only */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-b-2xl">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-slate-950 to-slate-900" />
       </div>
     </section>
   )

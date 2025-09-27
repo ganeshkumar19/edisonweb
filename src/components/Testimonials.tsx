@@ -75,7 +75,7 @@ export function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 md:py-24 bg-white">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl xxl:max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
